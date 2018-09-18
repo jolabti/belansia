@@ -13,7 +13,7 @@ class User_model extends CI_Model
     // Get Posting
     public function get_posting()
     {
-     
+
 
         //
         //  $this->db->select('*');
@@ -36,7 +36,7 @@ class User_model extends CI_Model
         $this->db->join('user', 'user.user_id = posting.user_id');
         //  $this->db->join('komen', 'komen.user_id = posting.user_id');
         //  $this->db->join('komen', 'komen.post_id = posting.post_id');
-        $this->db->order_by("posting.waktu", "asc");
+        $this->db->order_by("posting.created_at", "asc");
         // $this->db->where('posting.id_user',1);
         // $this->db->limit(5);
         $q = $this->db->get();
